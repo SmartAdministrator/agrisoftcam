@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="kiwi.master.cs" Inherits="kiwi.Pages.kiwi" %>
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="../style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="infos_account">
+            <asp:Image ID="IdImgProfil" Width="100" Height="100" CssClass="img_profile_class" runat="server" />
+            <table class="table_account">
+                <tr>
+                    <td class="infos_profile">Nom : </td>
+                    <td class="value_profile"><asp:Label ID="IdLabelNom" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td class="infos_profile">Prénom : </td>
+                    <td class="value_profile"><asp:Label ID="IdLabelPrenom" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td class="infos_profile">Matricule : </td>
+                    <td class="value_profile"><asp:Label ID="IdLabelMatricule" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td class="infos_profile">Profil : </td>
+                    <td class="value_profile"><asp:Label ID="IdLapbelProfile" runat="server"></asp:Label></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="menu"> 
+            <ul id="onglets" runat="server"> 
+                <li id="Id_Onglet_Accueil" runat="server"><a href="Accueil.aspx">Accueil</a></li>
+                <li id="Id_Onglet_Administration" runat="server"><a href="Administration.aspx">Administration</a></li> 
+                <li id="Id_Onglet_Evolutions"  class="active" runat="server"><a href="Rapports.aspx">Evolutions</a></li>
+                <li id="Id_Onglet_ManagementLapins" runat="server"><a href="ManagementsLapins.aspx">Evenements</a></li>
+                <li id="Id_Onglet_Rechercher" runat="server"><a href="Lapins.aspx">Rechercher</a></li>
+                <li id="Id_Onglet_Simulations" runat="server"><a href="Simulation.aspx">Simulations</a></li>
+            </ul> 
+         </div> 
+        <div id="sous_barre"> 
+        </div>
+        <div class ="MainPage">
+            <asp:ContentPlaceHolder ID="IdMainContent" runat="server"></asp:ContentPlaceHolder>
+       </div> 
+    </div>
+    </form>
+</body>
+</html>
